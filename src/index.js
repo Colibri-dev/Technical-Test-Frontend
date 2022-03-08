@@ -1,2 +1,1 @@
-// Ajax call and Vanilla JS
-
+// Your Javascript here
