@@ -1,5 +1,5 @@
 # Technical-Test-Frontend
-Create a website for a Company Beer
+Create a website for a Beer Compagny
 
 ## Subject: 
 You are a Freelance Developer working in remote.
