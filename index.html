@@ -1,33 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- JS Font awesome Kit -->
-    <script src="https://kit.fontawesome.com/a68893f678.js" crossorigin="anonymous"></script>
-    <!-- Leaflet library -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-    crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-    crossorigin=""></script>
-    <!-- Your own CSS -->
-    <link href="assets/styles.css" rel="stylesheet"/>
+	<!-- JS Font awesome Kit -->
+	<script src="https://kit.fontawesome.com/a68893f678.js" crossorigin="anonymous"></script>
+	<!-- Leaflet library -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+	integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+	crossorigin=""/>
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+	integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+	crossorigin=""></script>
+	<!-- Your own CSS -->
+	<link rel="stylesheet/less" type="text/css" href="./assets/styles.less">
 
-    <title>Breweries search</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+	<title>Breweries search</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
 
-    <!-- Your HTML here -->
+	<!-- Your HTML here -->
 
+	<header>
+		<h1>Find breweries in your country!</h1>
+		<form>
+			<p>Type your country here...</p>
+			<input type="text" placeholder="France">
+			<button>
+				<i class="fa-solid fa-magnifying-glass"></i>
+			</button>
+		</form>
+		<p>Make a search to find if Breweries are naer to you!</p>
+	</header>
 
-    <!-- Ajax Jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Your own script -->
-    <script src="src/index.js"></script>
+	<div class="menu">
+		<button>
+			<i class="fa-solid fa-beer-mug-empty"></i>
+		</button>
+		<button>
+			<i class="fa-solid fa-city"></i>
+		</button>
+		<button>
+			<i class="fa-solid fa-list"></i>
+		</button>
+		<button>
+			<i class="fa-solid fa-location-dot"></i>
+		</button>
+	</div>
+
+	<section class="informationContainer">
+		<div class="tileContainer">
+			<div id="brewerieTile" class="tile">
+				<p class="number">3</p>
+				<p>Brewerie(s)</p>
+			</div>
+			<div id="cityTile" class="tile">
+				<p class="number">2</p>
+				<p class="citySentence">In <span class="cityName">Marseille</span></p>
+			</div>
+			<div id="regionTile" class="tile">
+				<p class="number">3</p>
+				<p class="regionName">Bouches du Rhône</p>
+			</div>
+		</div>
+	
+		<div class="tableContainer">
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Adress</th>
+						<th>Phone</th>
+						<th>Website</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="rowTemplate">
+						<td>Nom du pub</td>
+						<td>16 rue Saint Pierre, Marseille</td>
+						<td>0491473254</td>
+						<td><a href="#">https://lorem.ipsum</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+
+	<section class="mapContainer">futur carte</section>
+
+	<!-- Ajax Jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+	<!-- less -->
+	<script src="https://cdn.jsdelivr.net/npm/less@4" ></script>
+	<!-- Your own script -->
+	<script src="src/index.js"></script>
 </body>
 </html>
