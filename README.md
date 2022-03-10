@@ -24,7 +24,7 @@ You have a small and simple architecture prepared for you with the libraries you
 2. Use Font Awesome V6 for icons
 2. Use Leaflet's library for added Map and markers
 3. Be responsable, be responsive. Respect the Design.
-4. Send your work on a new bran called "YourNameDev", and push your work on this Github (don't destroy the main branch!)
+4. Send your work on a new branch called "YourNameDev", and push your work on this Github (don't destroy the main branch!)
 
 The purpose is to see what are you capable in small time, sooooooo... don't rush but don't take too time on it (a morning / an afternoon).
 We want to see your creativity on practical solutions!
