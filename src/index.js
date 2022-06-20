@@ -36,9 +36,32 @@ function insertDataBrewery(brewery) {
     $('#info-breweries>tbody>tr:last').append('<td><a href="' + brewery.website_url + '">' + brewery.website_url + '</a></td>'); // Website
 }
 
+var totalBreweries = 0;
+var breweryCityNumber = [];
+var breweryCityName = [];
+var breweryStateNumber = [];
+var breweryStateName = [];
+
 getBreweries("https://api.openbrewerydb.org/breweries?by_country=France", function (response) {
     response.forEach(element => {
         if (element.latitude !== null && element.longitude !== null) {
+            // Calcul du total
+            totalBreweries = totalBreweries + 1;
+            if (breweryCityName.indexOf(element.city) === -1) {
+                breweryCityName.push(element.city);
+                breweryCityNumber.push(1);
+            } else {
+                breweryCityNumber[breweryCityName.indexOf(element.city)] = breweryCityNumber[breweryCityName.indexOf(element.city)] + 1;
+            }
+
+            if (breweryStateName.indexOf(element.state) === -1) {
+                breweryStateName.push(element.state);
+                breweryStateNumber.push(1);
+            } else {
+                breweryStateNumber[breweryStateName.indexOf(element.state)] = breweryStateNumber[breweryStateName.indexOf(element.state)] + 1;
+            }
+
+            // Insertion des données des Breweries
             insertDataBrewery(element);
 
             // Défini l'icone du marqueur
@@ -47,6 +70,11 @@ getBreweries("https://api.openbrewerydb.org/breweries?by_country=France", functi
             L.marker([element.latitude, element.longitude], { icon: myIcon }).addTo(map);
         }
     });
+
+    // Ajout des nombres de Breweries
+    $('#total-breweries>p').append('<span>' + totalBreweries + '</span><br/>Brewerie(s)');
+    $('#number-breweries-city>p').append('<span>' + Math.max.apply(this, breweryCityNumber) + '</span><br/>In ' + breweryCityName[$.inArray(Math.max.apply(this, breweryCityNumber), breweryCityNumber)]);
+    $('#number-breweries-state>p').append('<span>' + Math.max.apply(this, breweryStateNumber) + '</span><br/>' + breweryStateName[$.inArray(Math.max.apply(this, breweryStateNumber), breweryStateNumber)]);
 });
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
