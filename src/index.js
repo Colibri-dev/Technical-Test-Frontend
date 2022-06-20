@@ -24,9 +24,19 @@ function getBreweries(url, callback) {
     request.send(null);
 }
 
+function insertDataBrewery(brewery) {
+    $('#info-breweries>tbody').append('<tr></tr>');
+    $('#info-breweries>tbody>tr:last').append('<td>' + brewery.name + '</td>'); // Name
+    $('#info-breweries>tbody>tr:last').append('<td>' + brewery.street + ', ' + brewery.city + '</td>'); // Address
+    $('#info-breweries>tbody>tr:last').append('<td>' + brewery.phone + '</td>'); // Phone
+    $('#info-breweries>tbody>tr:last').append('<td><a href="' + brewery.website_url + '">' + brewery.website_url + '</a></td>'); // Website
+}
+
 getBreweries("https://api.openbrewerydb.org/breweries?by_country=France", function (response) {
     response.forEach(element => {
         if (element.latitude !== null && element.longitude !== null) {
+            insertDataBrewery(element);
+
             // Défini l'icone du marqueur
             let myIcon = L.divIcon({ className: 'fa-solid fa-location-dot marker' });
             // Place les marqueurs sur la carte
