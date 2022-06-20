@@ -63,6 +63,14 @@ table {
 fieldset {
   border: none;
 }
+.elements-nav {
+  border-radius: 7px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  box-shadow: 0px 3px 5px #161616;
+  -moz-box-shadow: 0px 3px 5px #161616;
+  -webkit-box-shadow: 0px 3px 5px #161616;
+}
 header {
   background: linear-gradient(150deg, #000957 30%, #344CB7 60%);
   color: #fff;
@@ -81,6 +89,64 @@ header h2 {
   grid-column-start: 2;
   text-align: right;
   line-height: 70px;
+}
+header nav {
+  grid-column-start: 2;
+  justify-self: flex-end;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+header nav ul li {
+  display: block;
+  margin-left: 35px;
+}
+header nav ul li:nth-child(1) {
+  background-color: #000957;
+  border-radius: 7px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  box-shadow: 0px 3px 5px #161616;
+  -moz-box-shadow: 0px 3px 5px #161616;
+  -webkit-box-shadow: 0px 3px 5px #161616;
+}
+header nav ul li:nth-child(2) {
+  background-color: #577BC1;
+  border-radius: 7px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  box-shadow: 0px 3px 5px #161616;
+  -moz-box-shadow: 0px 3px 5px #161616;
+  -webkit-box-shadow: 0px 3px 5px #161616;
+}
+header nav ul li:nth-child(3) {
+  background-color: #EBE645;
+  border-radius: 7px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  box-shadow: 0px 3px 5px #161616;
+  -moz-box-shadow: 0px 3px 5px #161616;
+  -webkit-box-shadow: 0px 3px 5px #161616;
+}
+header nav ul li:nth-child(3) a {
+  color: #000;
+}
+header nav ul li:nth-child(4) {
+  background-color: #511281;
+  border-radius: 7px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  box-shadow: 0px 3px 5px #161616;
+  -moz-box-shadow: 0px 3px 5px #161616;
+  -webkit-box-shadow: 0px 3px 5px #161616;
+}
+header nav ul li a {
+  display: inline-block;
+  text-align: center;
+  width: 42px;
+  padding: 12px 0;
+  color: #fff;
 }
 header #form-country {
   padding: 10px;
