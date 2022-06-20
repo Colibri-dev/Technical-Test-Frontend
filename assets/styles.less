@@ -1,5 +1,7 @@
+// Importation du fichier de reset
 @import 'reset.less';
 
+// Variables
 @darkBlue: #000957;
 @mediumBlue: #344CB7;
 @lightBlue: #577BC1;
@@ -9,18 +11,27 @@
 @black: #000;
 @orangeRed: #D33F27;
 
+/**
+*
+* Liste des fonctions
+*
+**/
+
+// Fonction box-shadow => permet de rendre compatible la méthode avec les anciennes version des navigateurs
 .box-shadow(@x: 0, @y: 0, @blur: 1px, @color: #000) {
     box-shadow: @arguments;
     -moz-box-shadow: @arguments;
     -webkit-box-shadow: @arguments;
 }
 
+// Fonction border-radius => permet de rendre compatible la méthode avec les anciennes version des navigateurs
 .border-radius(@radius) {
     border-radius: @radius;
     -moz-border-radius: @radius;
     -webkit-border-radius: @radius;
 }
 
+// Permet de personnaliser les éléments du menu (header)
 .elements-nav {
     .border-radius(7px);
     .box-shadow(0px, 3px, 5px, #161616);

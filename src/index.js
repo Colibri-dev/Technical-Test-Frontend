@@ -45,7 +45,7 @@ var breweryStateName = [];
 getBreweries("https://api.openbrewerydb.org/breweries?by_country=France", function (response) {
     response.forEach(element => {
         if (element.latitude !== null && element.longitude !== null) {
-            // Calcul du total
+            // Calcul des totaux
             totalBreweries = totalBreweries + 1;
             if (breweryCityName.indexOf(element.city) === -1) {
                 breweryCityName.push(element.city);
