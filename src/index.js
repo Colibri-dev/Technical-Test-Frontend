@@ -25,10 +25,14 @@ function getBreweries(url, callback) {
 }
 
 function insertDataBrewery(brewery) {
+    // Formatage du numéro de téléphone
+    let phone = '0' + brewery.phone;
+    phone = phone.replace(/(.{2})(?!$)/g, "$1 ");
+
     $('#info-breweries>tbody').append('<tr></tr>');
     $('#info-breweries>tbody>tr:last').append('<td>' + brewery.name + '</td>'); // Name
     $('#info-breweries>tbody>tr:last').append('<td>' + brewery.street + ', ' + brewery.city + '</td>'); // Address
-    $('#info-breweries>tbody>tr:last').append('<td>' + brewery.phone + '</td>'); // Phone
+    $('#info-breweries>tbody>tr:last').append('<td>' + phone + '</td>'); // Phone
     $('#info-breweries>tbody>tr:last').append('<td><a href="' + brewery.website_url + '">' + brewery.website_url + '</a></td>'); // Website
 }
 
