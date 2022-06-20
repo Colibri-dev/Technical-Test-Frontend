@@ -153,8 +153,6 @@ header nav ul li a {
 }
 header #form-country {
   padding: 10px;
-  grid-row-start: 1;
-  grid-row-end: 4;
   align-self: center;
 }
 header #form-country p {
@@ -184,26 +182,23 @@ header #form-country span button {
   padding: 9px;
   color: #fff;
 }
-#container #container-breweries {
-  grid-column-start: 1;
+header #container-breweries {
   position: relative;
-  height: 90px;
 }
-#container #container-breweries #breweries {
+header #container-breweries #breweries {
   position: absolute;
-  top: -86px;
-  display: flex;
+  top: -60px;
 }
-#container #container-breweries #breweries .number-breweries {
-  width: 200px;
-  height: 140px;
-  text-align: center;
+header #container-breweries #breweries .number-breweries {
   background-color: #fff;
   color: #000957;
   font-size: 1.8em;
   font-weight: bold;
+  text-align: center;
   padding: 15px;
-  margin-right: 40px;
+  display: inline-block;
+  max-width: 200px;
+  height: 140px;
   border-radius: 10px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -211,22 +206,38 @@ header #form-country span button {
   -moz-box-shadow: 0px 3px 5px #161616;
   -webkit-box-shadow: 0px 3px 5px #161616;
 }
-#container #container-breweries #breweries .number-breweries span {
+header #container-breweries #breweries .number-breweries:nth-child(2),
+header #container-breweries #breweries .number-breweries:nth-child(3) {
+  margin-left: 40px;
+}
+header #container-breweries #breweries .number-breweries p {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+header #container-breweries #breweries .number-breweries p span {
   color: #577BC1;
   font-size: 2.5em;
   font-weight: bold;
   padding-bottom: 15px;
 }
-#container #container-breweries #breweries .number-breweries:nth-child(2) {
+header #container-breweries #breweries .number-breweries p:nth-child(2) {
   color: #577BC1;
 }
-#container #container-breweries #breweries .number-breweries:nth-child(2) span {
+header #container-breweries #breweries .number-breweries p:nth-child(2) span {
   color: #000957;
 }
+#container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 2%;
+}
 #container #info-breweries {
+  align-self: flex-start;
   display: inline-block;
   padding: 20px;
-  margin-top: 30px;
+  margin-top: 10vh;
   background-color: #fff;
   border-radius: 10px;
   -moz-border-radius: 10px;
@@ -259,8 +270,9 @@ header #form-country span button {
   width: 11em;
 }
 #container #map {
-  height: 600px;
-  width: 700px;
+  height: 60vh;
+  width: 40vw;
+  margin-left: 5%;
   border-radius: 10px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
