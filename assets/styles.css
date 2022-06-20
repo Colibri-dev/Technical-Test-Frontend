@@ -1,3 +1,120 @@
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+strong,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+figcaption,
+footer,
+header,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+body {
+  box-sizing: border-box;
+  line-height: 1;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset {
+  border: none;
+}
+header {
+  background: linear-gradient(150deg, #000957 30%, #344CB7 60%);
+  color: #fff;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+header h1 {
+  font-size: 3.5em;
+  font-weight: bold;
+  text-align: right;
+  line-height: 70px;
+}
+header h2 {
+  font-size: 1.1em;
+  grid-column-start: 2;
+  text-align: right;
+  line-height: 70px;
+}
+header #form-country {
+  padding: 10px;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  align-self: center;
+}
+header #form-country p {
+  padding-bottom: 15px;
+}
+header #form-country span {
+  padding: 9px 2px;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  background-color: #fff;
+}
+header #form-country span input {
+  border: none;
+  margin-left: 18px;
+}
+header #form-country span input :focus {
+  border: none;
+  outline: none;
+}
+header #form-country span button {
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  background-color: #EBE645;
+  border: none;
+  padding: 9px;
+  color: #fff;
+}
 #map {
   height: 600px;
   width: 700px;

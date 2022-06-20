@@ -1,3 +1,74 @@
+@import 'reset.less';
+
+@darkBlue: #000957;
+@mediumBlue: #344CB7;
+@yellow: #EBE645;
+@white: #fff;
+
+.border-radius(@radius) {
+    border-radius: @radius;
+    -moz-border-radius: @radius;
+    -webkit-border-radius: @radius;
+}
+
+header {
+    background: linear-gradient(150deg, @darkBlue 30%, @mediumBlue 60%);
+    color: @white;
+    padding: 30px;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    h1 {
+        font-size: 3.5em;
+        font-weight: bold;
+        text-align: right;
+        line-height: 70px;
+    }
+
+    h2 {
+        font-size: 1.1em;
+        grid-column-start: 2;
+        text-align: right;
+        line-height: 70px;
+    }
+
+    #form-country {
+        padding: 10px;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        align-self: center;
+
+        p {
+            padding-bottom: 15px;
+        }
+
+        span {
+            padding: 9px 2px;
+            .border-radius(20px);
+            background-color: @white;
+
+            input {
+                border: none;
+                margin-left: 18px;
+
+                :focus {
+                    border: none;
+                    outline: none;
+                }
+            }
+
+            button {
+                .border-radius(20px);
+                background-color: @yellow;
+                border: none;
+                padding: 9px;
+                color: @white;
+            }
+        }
+    }
+}
+
 #map {
     height: 600px;
     width: 700px;
