@@ -26,6 +26,10 @@
     .box-shadow(0px, 3px, 5px, #161616);
 }
 
+body {
+    font-family: sans-serif, 'Segoe UI', Tahoma, Verdana
+}
+
 header {
     background: linear-gradient(150deg, @darkBlue 30%, @mediumBlue 60%);
     color: @white;
@@ -131,12 +135,95 @@ header {
     }
 }
 
-#map {
-    height: 600px;
-    width: 700px;
-}
+#container {
 
-.marker {
-    font-size: 2.5em;
-    color: @orangeRed;
+    #container-breweries {
+        grid-column-start: 1;
+        position: relative;
+        height: 90px;
+
+        #breweries {
+            position: absolute;
+            top: -86px;
+            display: flex;
+
+            .number-breweries {
+                width: 200px;
+                height: 140px;
+                text-align: center;
+                background-color: @white;
+                color: @darkBlue;
+                font-size: 1.8em;
+                font-weight: bold;
+                padding: 15px;
+                margin-right: 40px;
+                .border-radius(10px);
+                .box-shadow(0px, 3px, 5px, #161616);
+
+                span {
+                    color: @lightBlue;
+                    font-size: 2.5em;
+                    font-weight: bold;
+                    padding-bottom: 15px;
+                }
+
+                &:nth-child(2) {
+                    color: @lightBlue;
+
+                    span {
+                        color: @darkBlue;
+                    }
+                }
+            }
+        }
+    }
+
+    #info-breweries {
+        display: inline-block;
+        padding: 20px;
+        margin-top: 30px;
+        background-color: @white;
+        .border-radius(10px);
+        .box-shadow(0px, 3px, 5px, #161616);
+
+        thead {
+            text-align: left;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        tr {
+            line-height: 2.5em;
+
+            td {
+                font-size: 0.8em;
+                color: #000;
+
+                a {
+                    color: #000;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            th,
+            td {
+                width: 11em;
+            }
+        }
+    }
+
+    #map {
+        height: 600px;
+        width: 700px;
+        .border-radius(10px);
+    }
+
+    .marker {
+        font-size: 2.5em;
+        color: @orangeRed;
+    }
 }

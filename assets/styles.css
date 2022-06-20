@@ -71,6 +71,9 @@ fieldset {
   -moz-box-shadow: 0px 3px 5px #161616;
   -webkit-box-shadow: 0px 3px 5px #161616;
 }
+body {
+  font-family: sans-serif, 'Segoe UI', Tahoma, Verdana;
+}
 header {
   background: linear-gradient(150deg, #000957 30%, #344CB7 60%);
   color: #fff;
@@ -181,11 +184,88 @@ header #form-country span button {
   padding: 9px;
   color: #fff;
 }
-#map {
+#container #container-breweries {
+  grid-column-start: 1;
+  position: relative;
+  height: 90px;
+}
+#container #container-breweries #breweries {
+  position: absolute;
+  top: -86px;
+  display: flex;
+}
+#container #container-breweries #breweries .number-breweries {
+  width: 200px;
+  height: 140px;
+  text-align: center;
+  background-color: #fff;
+  color: #000957;
+  font-size: 1.8em;
+  font-weight: bold;
+  padding: 15px;
+  margin-right: 40px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  box-shadow: 0px 3px 5px #161616;
+  -moz-box-shadow: 0px 3px 5px #161616;
+  -webkit-box-shadow: 0px 3px 5px #161616;
+}
+#container #container-breweries #breweries .number-breweries span {
+  color: #577BC1;
+  font-size: 2.5em;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+#container #container-breweries #breweries .number-breweries:nth-child(2) {
+  color: #577BC1;
+}
+#container #container-breweries #breweries .number-breweries:nth-child(2) span {
+  color: #000957;
+}
+#container #info-breweries {
+  display: inline-block;
+  padding: 20px;
+  margin-top: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  box-shadow: 0px 3px 5px #161616;
+  -moz-box-shadow: 0px 3px 5px #161616;
+  -webkit-box-shadow: 0px 3px 5px #161616;
+}
+#container #info-breweries thead {
+  text-align: left;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+#container #info-breweries tr {
+  line-height: 2.5em;
+}
+#container #info-breweries tr td {
+  font-size: 0.8em;
+  color: #000;
+}
+#container #info-breweries tr td a {
+  color: #000;
+  text-decoration: none;
+}
+#container #info-breweries tr td a:hover {
+  text-decoration: underline;
+}
+#container #info-breweries tr th,
+#container #info-breweries tr td {
+  width: 11em;
+}
+#container #map {
   height: 600px;
   width: 700px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
 }
-.marker {
+#container .marker {
   font-size: 2.5em;
   color: #D33F27;
 }
